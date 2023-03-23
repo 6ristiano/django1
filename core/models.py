@@ -6,7 +6,7 @@ class Produto(models.Model):
     estoque = models.IntegerField ('Quantidade em Estoque')
 
     def __str__(self):
-        return f'{self.nome} {self.estoque}'
+        return self.nome
 
 class Cliente(models.Model):
     nome = models.CharField('Nome', max_length=100)
@@ -14,4 +14,4 @@ class Cliente(models.Model):
     email = models.EmailField('E-mail', max_length=100)
 
     def __str__(self):
-        return f'{self.nome} {self.sobrenome}'
+        return (f'{self.nome} {self.sobrenome}')
